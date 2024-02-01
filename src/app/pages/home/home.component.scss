@@ -1,11 +1,18 @@
 .hero {
     height: 100vh;
     background-color: black;
-    background-image: url(/assets/images/hero.png);
+    background-image: radial-gradient(
+        circle,
+        rgb(7 8 7 / 17%) 5%,
+        rgba(0, 0, 0, 0.8862897399) 100%),
+      url(/assets/images/hero.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
 }
+
+
 
 
 // X-Large devices (large desktops, 1200px and up)
@@ -24,77 +31,140 @@
 
 .search {
     position: relative;
-    box-shadow: 0 0 40px rgba(51, 51, 51, .1);
     width: 100%;
 }
 
 .search input {
-
-    height: 60px;
+    height: 65px;
     text-indent: 25px;
-    border: 2px solid #d6d4d4;
 }
 
 
-.search {
-    button {
-        background: #FCA526 !important;
-        border-width: 2px;
-        border-style: solid;
-        border-color: black;
-    }
-}
-
-.search input:focus {
-
-    box-shadow: none;
-    border: 2px solid blue;
-
-
-}
-
-.search .fa-search {
-
-    position: absolute;
-    top: 20px;
-    left: 16px;
-
-}
-
-.search button {
-
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    height: 55px;
-    width: 55px;
-    background: blue;
-    border-radius: 27px;
-    border-color: white;
-}
-
-/// content
 .container.search {
-    height: 50%;
+    height: 70%;
+}
+
+
+.search__title {
+    font-family: "Retro Team";
+    font-size: 50px;
+    color: yellow;
+    letter-spacing: 5px;
 
 }
 
 .form-control {
     border-radius: 27px;
-    background-color: #ffffffa1;
-    box-shadow: 3px 3px 20px 7px;
+    background-color: rgb(255, 255, 255);
+    border-color: #4F3331;
+    box-shadow: 3px 3px 8px 2px;
+    font-family: "Mom Typewriter";
+    font-size: 18px;
 }
 
+.form-control:focus {
+    border-color: #4F3331;
+
+}
+
+.form-control::placeholder {
+    font-family: "Mom Typewriter";
+}
+
+
 .search-icon {
-    height: 50px;
-    width: 70px;
+    position: absolute;
+    right: -25px;
+    top: 2px;
+    height: 100%;
+    width: 80px;
     content: "";
     display: flex;
     background-image: url(/assets/images/icons/search.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin: -3px 0px 0px -7px;
+    margin-top: 1px
 }
 
 
+///NEON
+.neon__text {
+    animation: flicker 1.5s infinite alternate;
+    color: #f4ce26;
+    -webkit-text-stroke: 1px #000;
+}
+
+
+/* Flickering animation */
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #0fa,
+            0 0 80px #0fa,
+            0 0 90px #0fa,
+            0 0 100px #0fa,
+            0 0 150px #0fa;
+
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+///
+/// 
+
+
+
+.neon__text2 {
+    --neon-text-color: rgb(233, 206, 196);
+    color: #f5cd26;
+    padding: 1em 0em 1em 0em;
+    //text-shadow:
+    //        0 0 10px rgba(226, 232, 239, 0.7), 0 0 30px rgba(226, 232, 239, 0.7), 0 0 90px rgba(226, 232, 239, 0.7);
+    //-webkit-text-stroke: 1px #000;
+    //animation: flicker2 5.5s infinite alternate;
+   // text-shadow:
+  //  0 0 10px rgba(226, 232, 239, 0.7), 0 0 30px rgba(226, 232, 239, 0.7), 0 0 90px rgba(226, 232, 239, 0.7)
+}
+
+
+/* Animate neon flicker */
+@keyframes flicker2 {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+
+        text-shadow:
+            0 0 10px rgba(226, 232, 239, 0.7), 0 0 30px rgba(226, 232, 239, 0.7), 0 0 90px rgba(226, 232, 239, 0.7)
+    }
+
+
+    20%,
+    24%,
+    55% {
+        text-shadow:
+            none
+    }
+}
