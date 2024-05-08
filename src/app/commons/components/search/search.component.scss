@@ -1,0 +1,49 @@
+.search {
+    border-radius: 27px;
+    background-color: rgb(255, 255, 255);
+    border-color: #4F3331;
+    box-shadow: 3px 3px 8px 2px;
+    font-family: "Mom Typewriter";
+    font-size: 18px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.search:focus {
+    border-color: #4F3331;
+}
+
+.search>input::placeholder {
+    font-family: "Mom Typewriter";
+    font-size: 0.8rem;
+}
+
+.search > input {
+    border-style: none;
+    padding: 0px;
+    height: 100%;
+    border-radius: 27px;
+    padding: 0px 15px ;
+
+}
+
+.search > input:focus {
+    border-color: white;
+    box-shadow: none;
+}
+
+
+
+.search__icon {
+    width: 45px;
+    height: 45px;
+    background-color: #f4cd25;
+    color: white;
+    border-style: none;
+}
+
+.search__icon:hover {
+    background-color: #e6bf17;
+}

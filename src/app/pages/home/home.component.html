@@ -1,23 +1,13 @@
-<section class="hero">
-  <div class="container header flex-column justify-content-center align-items-center">
-    <app-navbar class="d-flex"></app-navbar>
+<section>
+  <!---NAVBAR SECTION-->
+  <div class="container header flex-column justify-content-center align-items-center relative index-1">
+    <app-navbar class="d-flex justify-content-center w-100"></app-navbar>
   </div>
 
-
-  <div class="container search flex-column justify-content-center align-items-center">
-    <label class="search__title neon__text2">what are you looking for?</label>
-
-    <div class="row w-100 d-flex justify-content-center align-items-center">
-
-      <div class="col-md-8">
-        <div class="search">
-          <i class="fa fa-search"></i>
-          <input type="text" class="form-control" placeholder="What are you loking for?">
-          <i class="search-icon"></i>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
+  <!---HERO-->
+  <app-hero></app-hero>
+  <app-articles></app-articles>
+</section>
+<section class="copyright bg-black">
+  <app-copy-rights class="w-100"></app-copy-rights>
 </section>

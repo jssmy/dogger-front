@@ -1,0 +1,61 @@
+
+.subjects {
+    padding: 10px;
+    &__item {
+        background-color: white;
+        margin: 0px 20px;
+        font-family: "Mom Typewriter";
+        border-radius: 10px;
+        min-width: 100px;
+        height: 100px;
+    }
+}
+
+
+@media (min-width: 576px) {
+    .subjects__item {
+        transition: width 0.3s ease;
+    }
+
+    .subjects__item:hover {
+        width: 140px;
+    }
+}
+
+
+
+
+.subjects__item h3 {
+    padding: 0px;
+    margin: 0px 0px 0px 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.subjects__avatar {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.subjects__title {
+    border-radius: 0px 0px 10px 10px;
+    display: none !important;
+}
+
+
+.subjects__section__title {
+    font-size: 25px;
+    font-family: "Retro Team";
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.underline {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    width: 40px;
+    height: 3px;
+    bottom: 0px;
+    left: calc(50% - 20px);
+    background: rgb(139, 228, 71);
+} 

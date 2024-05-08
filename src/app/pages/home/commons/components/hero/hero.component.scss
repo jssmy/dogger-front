@@ -1,0 +1,51 @@
+.hero {    
+    background-color: #040404;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.56) 5%, rgb(0 0 0 / 55%) 100%), url(/assets/images/hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    margin-top: -3.5rem;
+}
+
+
+
+@media (max-height: 800px) {
+    .hero {
+        background-size: contain;
+        height: 70vh;
+        
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .hero {
+        background-size: contain;
+    }
+}
+
+@media (max-width: 1199px) {
+    .hero {
+        background-size: cover;
+    }
+}
+
+
+.container {
+    display: flex;
+}
+
+
+.container.search {
+    height: 55vh;
+}
+
+.search__title {
+    font-family: "Retro Team";
+    font-size: 2.5rem;
+    color: #f4cd25;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}

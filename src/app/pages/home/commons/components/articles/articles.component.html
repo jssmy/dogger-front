@@ -1,0 +1,14 @@
+<div class="container mt-5 d-flex flex-column subjects__section">
+    <h2  class="color-white subjects__section__title d-flex flex-column align-items-center mb-4">
+      ARTICLES
+      <span class="underline"></span>
+    </h2>
+    <div class="w-100 d-flex row">
+      @for (item of courses; track $index) {
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+          <app-course-preview [course]="item"></app-course-preview>
+        </div>
+      }
+   
+    </div>
+  </div>

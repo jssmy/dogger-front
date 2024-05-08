@@ -14,8 +14,12 @@
 
 .navbar-brand {
     color: black;
+    font-size: 1rem;
 }
 
+.nav-item {
+    font-size: 0.8rem;
+}
 .nav-link {
     color: black;
 }
@@ -31,6 +35,7 @@
     border-bottom-width: 5px;
     border-color: black;
     padding: 1em;
+    font-size: 0.8rem;
 }
 
 .dropdown-item:hover {
@@ -45,4 +50,10 @@
 .dropdown-menu > :last-child:hover a {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+
+@media (max-width: 991px) {
+    .w-md-100  {
+        width: 100%;
+    }
 }
