@@ -1,28 +1,32 @@
+@import "./../../../../assets/_indexes";
+@import "./../../../../assets/_variables";
+
 .container-loader {
-    position: absolute;
+    position: fixed;
     width: 100%;
     display: flex;
     justify-content: center;
     bottom: 0;
     top: 0;
     align-items: center;
-    background-color: #010101;
-    z-index: 99;
+    background-color: $color_hero;
+    z-index: $loaderIndex;
     display: flex;
     flex-direction: column;
     
     &__title {
-        color: #f4cd25;
-        font-family: "Retro Team";
+        color: $color_primary;
+        font-family: $font_hight_retro;
         letter-spacing: 15px;
         font-size: 2rem;
     }
+    overflow-y: scroll;
 }
 .loader {
-    margin-left: -2rem;
+    margin-left: -1rem;
     width: 80px;
     height: 40px;
-    color: #f4cd25;
+    color: $color_primary;
     border: 2px solid currentColor;
     border-right-color: transparent;
     padding: 3px;

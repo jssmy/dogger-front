@@ -1,9 +1,11 @@
+@import "./../../../../assets/_variables";
+
 .search {
     border-radius: 27px;
-    background-color: rgb(255, 255, 255);
-    border-color: #4F3331;
+    background-color: white;
+    border-color: $color_search_placeholder;
     box-shadow: 3px 3px 8px 2px;
-    font-family: "Mom Typewriter";
+    font-family: $font_small_retro;
     font-size: 18px;
     height: 55px;
     display: flex;
@@ -12,11 +14,11 @@
 }
 
 .search:focus {
-    border-color: #4F3331;
+    border-color: $color_search_placeholder;
 }
 
 .search>input::placeholder {
-    font-family: "Mom Typewriter";
+    font-family: $font_small_retro;
     font-size: 0.8rem;
 }
 
@@ -39,11 +41,11 @@
 .search__icon {
     width: 45px;
     height: 45px;
-    background-color: #f4cd25;
+    background-color:  $color_primary;
     color: white;
     border-style: none;
 }
 
 .search__icon:hover {
-    background-color: #e6bf17;
+    background-color: $color_search_hover;
 }

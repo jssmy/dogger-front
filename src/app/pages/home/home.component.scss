@@ -1,9 +1,6 @@
-// subjects
+@import "./../../../assets/_variables";
 
 
-.copyright {
-    height: 4vh;
-}
 
 @media (min-width: 991px) {
     .subjects__section {
@@ -14,5 +11,5 @@
 
 
 section {
-    background-color: #010101;
+    background-color: $color_hero;
 }

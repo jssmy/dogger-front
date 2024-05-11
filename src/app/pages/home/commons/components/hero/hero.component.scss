@@ -1,5 +1,6 @@
+@import "./../../../../../../assets/_variables";
 .hero {    
-    background-color: #040404;
+    background-color: $color_transform_hero;
     background-image: radial-gradient(circle, rgba(0, 0, 0, 0.56) 5%, rgb(0 0 0 / 55%) 100%), url(/assets/images/hero.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -7,8 +8,6 @@
     height: 60vh;
     margin-top: -3.5rem;
 }
-
-
 
 @media (max-height: 800px) {
     .hero {
@@ -42,9 +41,9 @@
 }
 
 .search__title {
-    font-family: "Retro Team";
+    font-family: $font_hight_retro;
     font-size: 2.5rem;
-    color: #f4cd25;
+    color: $color_primary;
     letter-spacing: 5px;
     text-align: center;
     margin-bottom: 10px;

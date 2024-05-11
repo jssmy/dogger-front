@@ -1,10 +1,11 @@
+@import "./../../../../../../assets/_variables";
 
 .subjects {
     padding: 10px;
     &__item {
         background-color: white;
         margin: 0px 20px;
-        font-family: "Mom Typewriter";
+        font-family: $font_hight_retro;
         border-radius: 10px;
         min-width: 100px;
         height: 100px;
@@ -44,7 +45,7 @@
 
 .subjects__section__title {
     font-size: 25px;
-    font-family: "Retro Team";
+    font-family: $font_hight_retro;
     letter-spacing: 3px;
     text-align: center;
 }
@@ -57,5 +58,5 @@
     height: 3px;
     bottom: 0px;
     left: calc(50% - 20px);
-    background: rgb(139, 228, 71);
+    background: $color_primary;
 } 

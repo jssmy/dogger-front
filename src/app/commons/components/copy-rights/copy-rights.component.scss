@@ -1,6 +1,9 @@
+@import "./../../../../assets/_variables";
+
 .copy-right {
-    color: #f4cd25;
+    color: $color_primary;
     font-size: 12px;
     padding: 0px;
     margin: 0px;
+    font-family: $font_small_retro;
 }
