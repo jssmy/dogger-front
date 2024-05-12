@@ -23,8 +23,9 @@ export class AppComponent implements AfterViewInit {
   ) {}
 
   ngAfterViewInit(): void {
-    timer(3 * 1000)
-    .subscribe(() => this.loader.end());
+    this.loader.end()
+    // timer(3 * 1000)
+    // .subscribe(() => this.loader.end());
     
     
   }

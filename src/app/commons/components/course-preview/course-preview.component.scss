@@ -1,21 +1,26 @@
 @import "./../../../../assets/_variables";
+@import "./../../../../assets/fonts/fonts";
 
-.card-title {
-    font-family: $font_hight_retro;
-    letter-spacing: 2px;
-    font-size: 1.2rem;
-    padding-top: 0.5rem;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-    
+
+.card {
+    padding: 10px;
+    background-color: $color_hero;
+
+    &-title {
+        font-family: $font_hight_retro;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+        color: $color_gray_ligth;
+        padding: 0px;
+    }
+
+    &-body{
+        padding: 0px;
+    }
 }
 
 .list-inline-item {
-    font-family: $font_hight_retro;
+    font-family: $font_typewriter;
     font-size: 1rem;
     letter-spacing: 3px;
-}
-
-.card {
-    padding: 5px;
 }

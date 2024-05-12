@@ -1,6 +1,3 @@
-$font_hight_retro: "Retro Team";
-$font_small_retro: "Mom Typewriter";
-$font_navbar: "Plane Cash";
 
 $color_hero: #010101;
 $color_transform_hero: #040404;
@@ -10,4 +7,11 @@ $color_search_placeholder: #4F3331;
 $color_navbar: #4aa1ad;
 $color_navbar_option: #FCA526;
 $color_navbar_option_hover: #de9322;
+$color_gray: #747e86;
+$color_gray_ligth: hsla(0,0%,100%,0.9);
+$color_gray_100: #acacac;
+
+.color-gray-100 {
+    color: $color_gray_100;
+}
 

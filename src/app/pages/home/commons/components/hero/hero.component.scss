@@ -1,7 +1,8 @@
 @import "./../../../../../../assets/_variables";
+@import "./../../../../../../assets/fonts/fonts";
 .hero {    
     background-color: $color_transform_hero;
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.56) 5%, rgb(0 0 0 / 55%) 100%), url(/assets/images/hero.png);
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.56) 5%, rgb(0 0 0 / 55%) 100%), url(/assets/images/hero.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -1,0 +1,34 @@
+@import "./../../../assets/_variables";
+@import "./../../../assets/fonts/fonts";
+
+
+section {
+    background-color: $color_hero;
+}
+
+
+.article {
+    color: $color_gray_100;
+    font-family: $font_typewriter_thin;
+    
+    font-size: 1.2rem;
+    line-height: 1.625;
+    &__title {
+        font-family: $font_navbar;
+        text-transform: lowercase;
+        color: $color_primary;
+        font-size: 1.8rem;
+    }
+}
+
+.social-network {
+    &__item {
+        color: $color_gray;
+    }
+}
+
+.suggested-articles {
+    &__title {
+        font-size: 1.2rem;
+    }
+}

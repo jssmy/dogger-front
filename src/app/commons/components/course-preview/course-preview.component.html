@@ -1,24 +1,17 @@
 <div class="card">
-    <a class="px-0" routerLink="/course/111">
-        <img [src]="course.imagePreview"
-        class="card-img-top" alt="Java script">
-    </a>
-    <h5 class="card-title">{{course.title}}</h5>
-    <div class="card-body">
-        <ul class="mb-3 list-inline">
-            <li class="list-inline-item"><i class="bi bi-clock"></i>2h 46m</li>
+    <figure>
+        <a class="px-0" routerLink="/article/nuevo-curso-de-programacion-avanzado-233">
+            <img [src]="course.imagePreview"
+            class="card-img-top" alt="Java script">
+        </a>
+    </figure>
+    <h5 class="card-title mt-1">{{course.title}}</h5>
+    <div class="card-body mt-1">
+        <ul class="mb-3 list-inline d-flex flex-column">
             <li class="list-inline-item">
-                <svg class="me-1 mt-n1" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                    <rect x="7" y="5" width="2" height="9" rx="1" fill="#DBD8E9"></rect>
-                    <rect x="11" y="2" width="2" height="12" rx="1" fill="#DBD8E9"></rect>
-                </svg>Beginner
+                <span class="fs-6 text-muted">{{ 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi consequuntur suscipit, officia ut culpa provident reprehenderit mollitia harum minima veritatis officiis sit dolor tempore voluptate nobis corporis ipsam animi fugit.' | slice: 0 : 100 }}...</span>
             </li>
-            <li class="list-inline-item">
-                <span class="me-1 mb-1"><i class="bi bi-person-fill-check me-1 mt-n1"></i>2,100</span>
-            </li>
-            <li class="list-inline-item">
+            <li class="list-inline-item mt-1">
                 <span class="text-warning me-1 mb-1"> <svg viewBox="0 0 24 24"
                         role="presentation" style="width: 0.875rem; height: 0.875rem;">
                         <path
