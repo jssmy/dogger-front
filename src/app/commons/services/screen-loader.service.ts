@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, timer } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,8 @@ export class ScreenLoaderService {
   }
 
   public end() {
-    this.loading$.next(false);
+    timer(2000)
+    .subscribe(() => this.loading$.next(false));
   }
 
 }

@@ -3,7 +3,6 @@
 
 
 .card {
-    padding: 10px;
     background-color: $color_hero;
 
     &-title {
@@ -14,9 +13,21 @@
         padding: 0px;
     }
 
-    &-body{
+    &-body {
         padding: 0px;
     }
+
+    &__preview {
+        position: relative;
+    }
+
+    &__tag {
+        position: absolute;
+        right: 0.3rem;
+        top: 0.4rem;
+    }
+    
+
 }
 
 .list-inline-item {
@@ -24,3 +35,45 @@
     font-size: 1rem;
     letter-spacing: 3px;
 }
+
+
+
+figure {
+    padding: 0px;
+    margin: 0px;
+}
+
+.large {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width:991px) {
+    .large {
+        flex-direction: column;
+    }
+
+    app-avatar-writer {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .large {
+
+        .card-img-top {
+            border-radius: calc(.25rem - 1px);
+        }
+
+
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1870px) {
+    .large {
+        figure {
+            width: 40% !important;
+        }
+    }
+}
+

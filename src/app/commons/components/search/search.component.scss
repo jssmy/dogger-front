@@ -5,13 +5,19 @@
     border-radius: 27px;
     background-color: white;
     border-color: $color_search_placeholder;
-    box-shadow: 3px 3px 8px 2px;
     font-family: $font_small_retro;
     font-size: 18px;
     height: 55px;
     display: flex;
     align-items: center;
     padding: 5px;
+
+    .ligth  {
+        box-shadow: 3px 3px 8px 2px;
+    }
+    .normal {
+        box-shadow: none;
+    }
 }
 
 .search:focus {
@@ -50,3 +56,4 @@
 .search__icon:hover {
     background-color: $color_search_hover;
 }
+

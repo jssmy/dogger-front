@@ -1,0 +1,67 @@
+<section>
+  <!---NAVBAR SECTION-->
+  <div class="container header flex-column justify-content-center align-items-center relative">
+    <app-navbar class="d-flex justify-content-center w-100"></app-navbar>
+  </div>
+
+</section>
+<section class="articles-header align-items-center d-flex">
+	<!-- Main banner background image -->
+	<div class="container">
+			<div class="row m-0">
+				<div class="col-12">
+					<!-- Title -->
+					<h1 class="articles-header__title">Result of search
+            <span class="articles-header__result-count">(12)</span>
+          </h1>
+					<!-- Breadcrumb -->
+				</div>
+			</div>
+	</div>
+</section>
+<section class="pb-0 pt-4 pb-md-5 articles">
+  <div class="container">
+    <div class="row mb-5 m-0">
+      <div class="col-lg-8 col-md-12 col-12">
+        <div class="row g-2 g-sm-3 align-items-center">
+          <div class="col-lg-6 col-md-6 col-12">
+            <form>
+              <app-search placeHolder="Search articles..."></app-search>
+            </form>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12">
+            <label for="categoryList" class="form-label visually-hidden">Search Category</label>
+            <select class="form-select" id="categoryList">
+              <option selected="" disabled="" value="">Select Category</option>
+              <option value="Digital">Digital</option>
+              <option value="Design">Design</option>
+              <option value="Business">Business</option>
+              <option value="Startup">Startup</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 d-flex row ms-0">
+        @for (item of articles; track $index) {
+          <div class="col-sm-6 col-md-6 col-lg-12 mb-4">
+            <app-course-preview [course]="item" size="large">
+            </app-course-preview>
+          </div>
+          <hr class="breakmark">
+        }
+
+      <div class="col-lg-12">
+        <div class="mt-xl-7 mt-3">
+          <a class="btn btn-outline-primary" href="#!">
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="ms-2">Load More</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="copyright bg-black">
+  <app-copy-rights class="w-100"></app-copy-rights>
+</section>

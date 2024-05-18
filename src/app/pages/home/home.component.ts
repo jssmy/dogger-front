@@ -5,7 +5,7 @@ import { SearchComponent } from '../../commons/components/search/search.componen
 import { NgOptimizedImage } from '@angular/common'
 import { CoursePreviewComponent } from '../../commons/components/course-preview/course-preview.component';
 import { HeroComponent } from './commons/components/hero/hero.component';
-import { ArticlesComponent } from './commons/components/articles/articles.component';
+import { PopularArticlesComponent } from './commons/components/popular-articles/popular-articles.component';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +17,7 @@ import { ArticlesComponent } from './commons/components/articles/articles.compon
     CoursePreviewComponent,
     NgOptimizedImage,
     HeroComponent,
-    ArticlesComponent
+    PopularArticlesComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

@@ -8,5 +8,13 @@ export const routes: Routes = [
     {
         path: 'article/:slug',
         loadComponent: () => import('./pages/article/article.component')
+    },
+    {
+        path: 'login',
+        loadComponent: () => import('./pages/login/login.component')
+    },
+    {
+        path: 'articles',
+        loadComponent: () => import('./pages/articles/articles.component')
     }
 ];

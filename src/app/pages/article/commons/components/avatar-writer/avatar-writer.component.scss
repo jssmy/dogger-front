@@ -11,19 +11,19 @@
         text-transform: lowercase;
         text-decoration: none;
         letter-spacing: 3px;
-        font-size: .7rem;
+        font-size: .65rem;
     }
 }
 
 .avatar-xxl {
-    height: 3rem;
-    width: 3rem;
+    height: 2.8rem;
+    width: 2.8rem;
 }
 
 @media (min-width: 768px) {
     .avatar-xxl {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2.3rem;
+        height: 2.3rem;
     }
 }
 
@@ -41,7 +41,7 @@
 
 .list-inline-item {
     letter-spacing: 3px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     .fa-brands {
         font-size: 1rem;
     }

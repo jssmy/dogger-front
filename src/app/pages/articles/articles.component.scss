@@ -1,0 +1,34 @@
+@import "./../../../assets/_variables";
+@import "./../../../assets/fonts/fonts";
+
+.articles {
+    color: $color_gray_100;
+    font-family: $font_typewriter_thin;
+}
+
+
+
+
+@media screen and (max-width:991px) {
+    .breakmark {
+        display: none;
+    }
+}
+
+.articles-header {
+    padding-top: 3.5rem;
+    padding-bottom: 2.8rem;
+    background: url("/assets/images/articles/04.png") no-repeat center center;
+    background-size:cover;
+    background-color: $color_hero;
+
+    &__title {
+        color: $color_primary;
+        font-family: $font_hight_retro;
+        
+    }
+
+    &__result-count {
+        font-size: 1.8rem;
+    }
+}

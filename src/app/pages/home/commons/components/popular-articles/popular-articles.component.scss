@@ -38,10 +38,6 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-.subjects__title {
-    border-radius: 0px 0px 10px 10px;
-    display: none !important;
-}
 
 
 .subjects__section__title {
@@ -49,6 +45,7 @@
     font-family: $font_hight_retro;
     letter-spacing: 3px;
     text-align: center;
+    color: $color_gray_ligth;
 }
 
 .underline {
