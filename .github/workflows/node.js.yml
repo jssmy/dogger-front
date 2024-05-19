@@ -50,13 +50,14 @@ jobs:
           name: dist
           path: dist
       - name: Sync files to hosting
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        #uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: airvzxf/ftp-deployment-action@latest
         with:
           server: ${{ secrets.FTP_SERVERNAME }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
-          ftp_ssl_allow: 'false'
+          ftp_ssl_allow: false
           net_max_retries: 0
 
 
