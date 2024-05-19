@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CopyRightsComponent } from '../../commons/components/copy-rights/copy-rights.component';
 import { NavbarComponent } from '../../commons/components/navbar/navbar.component';
 import { SearchComponent } from '../../commons/components/search/search.component';
 import { Course } from '../../commons/interfaces/course';
 import { CommonModule } from '@angular/common';
 import { CoursePreviewComponent } from '../../commons/components/course-preview/course-preview.component';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-articles',
@@ -14,12 +16,14 @@ import { CoursePreviewComponent } from '../../commons/components/course-preview/
     NavbarComponent,
     SearchComponent,
     CommonModule,
-    CoursePreviewComponent
+    CoursePreviewComponent,
+    RouterModule
   ],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.scss'
 })
-export default class ArticlesComponent {
+export default class ArticlesComponent implements OnInit, OnDestroy {
+  query: string = '';
   articles: Course[] = [
     {
       id: '12121w-343434-3',
@@ -85,4 +89,27 @@ export default class ArticlesComponent {
       officiis sit dolor tempore voluptate nobis corporis ipsam animi fugit.`
     }
   ];
+
+  subscriptions$: Subscription[] = [];
+
+  constructor(
+    private readonly routeActive: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    this.subscriptions$.push(
+      this.routeActive.queryParamMap
+      .subscribe(params => {
+        this.query = String(params.get('q') || '');
+      })
+    );
+  }
+
+
+  ngOnDestroy(): void {
+    this.subscriptions$.forEach(sub => sub.unsubscribe());
+    this.subscriptions$ = [];
+  }
+
+
 }

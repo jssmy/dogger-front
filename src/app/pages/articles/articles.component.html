@@ -5,59 +5,34 @@
   </div>
 
 </section>
-<section class="articles-header align-items-center d-flex">
-	<!-- Main banner background image -->
-	<div class="container">
-			<div class="row m-0">
-				<div class="col-12">
-					<!-- Title -->
-					<h1 class="articles-header__title">Result of search
-            <span class="articles-header__result-count">(12)</span>
-          </h1>
-					<!-- Breadcrumb -->
-				</div>
-			</div>
-	</div>
-</section>
-<section class="pb-0 pt-4 pb-md-5 articles">
-  <div class="container">
-    <div class="row mb-5 m-0">
-      <div class="col-lg-8 col-md-12 col-12">
-        <div class="row g-2 g-sm-3 align-items-center">
-          <div class="col-lg-6 col-md-6 col-12">
-            <form>
-              <app-search placeHolder="Search articles..."></app-search>
-            </form>
-          </div>
-          <div class="col-lg-6 col-md-6 col-12">
-            <label for="categoryList" class="form-label visually-hidden">Search Category</label>
-            <select class="form-select" id="categoryList">
-              <option selected="" disabled="" value="">Select Category</option>
-              <option value="Digital">Digital</option>
-              <option value="Design">Design</option>
-              <option value="Business">Business</option>
-              <option value="Startup">Startup</option>
-            </select>
-          </div>
+<section class=" align-items-center d-flex">
+  <!-- Main banner background image -->
+  <div class="articles-header container d-flex flex-column align-items-center justify-content-center">
+    <h3 class="articles-header__title mt-5">Results of search <span class="articles-header__result-count">(12)</span></h3>
+    <div class="row w-100 d-flex justify-content-center align-items-center">
+      <div class="col-12 col-md-7 col-xl-5">
+        <div class="">
+          <app-search [value]="query" styled="ligth"></app-search>
         </div>
       </div>
     </div>
-    <div class="w-100 d-flex row ms-0">
-        @for (item of articles; track $index) {
-          <div class="col-sm-6 col-md-6 col-lg-12 mb-4">
-            <app-course-preview [course]="item" size="large">
-            </app-course-preview>
-          </div>
-          <hr class="breakmark">
-        }
+  </div>
+</section>
 
-      <div class="col-lg-12">
-        <div class="mt-xl-7 mt-3">
-          <a class="btn btn-outline-primary" href="#!">
-            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            <span class="ms-2">Load More</span>
-          </a>
-        </div>
+<section class="pb-0 pt-4 pb-md-5 articles">
+  <div class="container">
+    <div class="w-100 d-flex row ms-0">
+      @for (item of articles; track $index) {
+      <div class="col-sm-6 col-md-6 col-lg-12 mb-4">
+        <app-course-preview [course]="item" size="large">
+        </app-course-preview>
+      </div>
+      <hr class="breakmark">
+      }
+
+      <div class="col-lg-12 d-flex flex-column justify-items-center align-items-center font-hight-retro_1 cursor-pointer color-primary">
+        <span class="">Load More</span>
+        <i class="fa-solid fa-caret-down"></i>
       </div>
     </div>
   </div>

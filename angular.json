@@ -32,6 +32,7 @@
             "styles": [
               "src/assets/plugins/bootstrap-5.0.2-dist/css/bootstrap.min.css",
               "src/assets/plugins/fontawesome-6.5.2-web/css/brands.min.css",
+              "src/assets/plugins/fontawesome-6.5.2-web/css/solid.min.css",
               "src/assets/plugins/fontawesome-6.5.2-web/css/fontawesome.min.css",
               "src/styles.scss"
             ],

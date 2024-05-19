@@ -16,5 +16,18 @@ export const routes: Routes = [
     {
         path: 'articles',
         loadComponent: () => import('./pages/articles/articles.component')
+    },
+    {
+        path: '404',
+        loadComponent: () => import('./pages/not-found/not-found.component')
+    },
+    {
+        path: '305',
+        loadComponent: () => import('./pages/building-page/building-page.component')
+    },
+    {
+        path: '**',
+        redirectTo: '404',
+        pathMatch: 'full'
     }
 ];
