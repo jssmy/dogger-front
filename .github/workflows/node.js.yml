@@ -67,7 +67,7 @@ jobs:
           server: ${{env.servername}}
           username: ${{env.username}}
           password: ${{env.password}}
-          protocol: ftp
+          protocol: ftps
           security: loose
           port: 21
           timeout: 60000
