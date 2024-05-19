@@ -40,8 +40,19 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     env: 
-      servername: ${{secrets.GITHUB_TOKEN}}
+      servername: ${{ secrets.FTP_SERVERNAME }}
+      username: ${{ secrets.FTP_USERNAME }}
+      password: ${{ secrets.FTP_PASSWORD }}
     steps:
+      - name: Se valida la contraseña
+        if: ${{ env.password == '' || env.password == null}}
+        run: echo "La contraseña esta vacìa"
+      - name: Se valida el nombre del usuario
+        if: ${{env.username == '' || env.password == null}}
+        run: echo "El usuario esta vacio"
+      - name: Se valida el servidor
+        if: ${{ env.servername == '' || env.servername == null}}
+        run: echo "El nombre del servidor esta vacio"
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Download Artifact
@@ -53,14 +64,14 @@ jobs:
         #uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         uses: airvzxf/ftp-deployment-action@latest
         with:
-          server: ${{ secrets.FTP_SERVERNAME }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{env.servername}}
+          username: ${{env.username}}
+          password: ${{env.password}}
           port: 21
           max_retries: 7
           no_symlinks: false
-          ftp_ssl_allow: true
-          ftp_use_feat: true
+          ftp_ssl_allow: false
+          ftp_use_feat: false
           ftp_nop_interval: 9
           net_max_retries: 0
           net_persist_retries: 11
@@ -68,8 +79,3 @@ jobs:
           dns_max_retries: 17
           dns_fatal_timeout: never
           lftp_settings: "set cache:cache-empty-listings true; set cmd:status-interval 1s; set http:user-agent 'firefox';"
-
-
-
-    
-    
