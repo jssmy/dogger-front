@@ -74,6 +74,5 @@ jobs:
             **/node_modules/**
             fileToExclude.txt
             .vscode/*
-            .htaccess
             applications/*
 
