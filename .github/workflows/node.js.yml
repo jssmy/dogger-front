@@ -64,13 +64,11 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         #uses: airvzxf/ftp-deployment-action@latest
         with:
-          server: ${{env.servername}}
-          username: ${{env.username}}
-          password: ${{env.password}}
+          server: ${{ env.servername }}
+          username: ${{ env.username }}
+          password: ${{ env.password }}
           protocol: ftps
           security: loose
-          port: 21
-          timeout: 60000
           #max_retries: 7
           #no_symlinks: false
           #ftp_ssl_allow: false
