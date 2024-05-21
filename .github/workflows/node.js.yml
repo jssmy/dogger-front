@@ -56,7 +56,7 @@ jobs:
           server: ${{ env.servername }}
           username: ${{ env.username }}
           password: ${{ env.password }}
-          local-dir: './../../dist/dogger/browser/'
+          local-dir: './dist/dogger/browser/'
           server-dir: '/'
           dangerous-clean-slate: true
           exclude: |
