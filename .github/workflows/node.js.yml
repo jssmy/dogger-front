@@ -62,7 +62,7 @@ jobs:
           path: dist
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        #uses: airvzxf/ftp-deployment-action@latest
+        # uses: airvzxf/ftp-deployment-action@latest
         with:
           server: ${{ env.servername }}
           username: ${{ env.username }}
