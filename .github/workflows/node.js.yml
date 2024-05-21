@@ -29,7 +29,12 @@ jobs:
         run: npm ci
       - name: Build project
         run: npm run build --if-present
-
+      - name: Archive production artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: dist_dogger
+          path: dist
+    
   deploy:
     name: Angular Deploy
     needs: build
@@ -50,14 +55,18 @@ jobs:
         run: echo "El nombre del servidor esta vacio"
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Download Artifact
+        uses: actions/download-artifact@main
+        with:
+          name: dist_dogger
+          path: dist
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ env.servername }}
           username: ${{ env.username }}
           password: ${{ env.password }}
-          local-dir: './dist/dogger/browser/'
-          server-dir: '/'
+          local-dir: /dist/dogger/browser
           dangerous-clean-slate: true
           exclude: |
             **/.git*
@@ -67,3 +76,4 @@ jobs:
             .vscode/*
             .htaccess
             applications/*
+
