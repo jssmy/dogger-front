@@ -100,7 +100,7 @@ export default class ArticlesComponent implements OnInit, OnDestroy {
     this.subscriptions$.push(
       this.routeActive.queryParamMap
       .subscribe(params => {
-        this.query = String(params.get('q') || '');
+        this.query = String(params.get('query') || '');
       })
     );
   }

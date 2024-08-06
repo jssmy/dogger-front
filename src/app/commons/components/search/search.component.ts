@@ -19,9 +19,9 @@ export class SearchComponent implements ControlValueAccessor{
   @Input() styled: 'ligth' | 'normal' = 'normal';
   @Input() value: string = '';
 
-  @Output() onSearch = new EventEmitter<String>();
+  @Output() onSearch = new EventEmitter<string>();
 
-  onChange = (value: string) => value;
+  onChange = (value: string) => this.value = value;
 
   onTouched = () => {};
 
@@ -54,6 +54,7 @@ export class SearchComponent implements ControlValueAccessor{
   }
 
   onChangedValue(value: string) {
+    
     this.onChange(value);
     this.touched = true;
     this.onTouched();

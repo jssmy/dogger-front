@@ -5,6 +5,7 @@ import { AvatarWriterComponent } from './commons/components/avatar-writer/avatar
 import { CoursePreviewComponent } from '../../commons/components/course-preview/course-preview.component';
 import { Course } from '../../commons/interfaces/course';
 import { ScreenLoaderService } from '../../commons/services/screen-loader.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -29,6 +30,8 @@ export default class ArticleComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit(): void {
+
+    
     this.articles = [
       {
         id: '12121w-343434-3',
